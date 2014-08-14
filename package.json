@@ -1,6 +1,6 @@
 {
   "name": "pg-writable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "writable stream directly into a postgres table",
   "main": "index.js",
   "scripts": {

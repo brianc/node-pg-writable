@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/brianc/node-pg-writable",
   "dependencies": {
-    "lodash": "^2.4.1",
     "pg-copy-streams": "^0.2.4",
     "pg.js": "^3.4.2",
     "through2": "^0.6.1"

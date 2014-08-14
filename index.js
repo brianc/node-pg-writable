@@ -1,7 +1,6 @@
 var mapper = require('through2').obj
 var pg = require('pg.js')
 var copyFrom = require('pg-copy-streams').from
-var _ = require('lodash')
 
 var writable = module.exports = function(table) {
   var client = new pg.Client()
@@ -9,9 +8,7 @@ var writable = module.exports = function(table) {
   var stream = client.query(copyFrom('COPY ' + table + ' FROM STDIN'))
 
   var map = mapper(function(arr, enc, cb) {
-    var rowText = _.map(arr, function(val) {
-      return val
-    }).join('\t') + '\n'
+    var rowText = arr.join('\t') + '\n'
     cb(null, rowText)
   })
 

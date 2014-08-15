@@ -23,6 +23,10 @@ writable.end()
 
 ```
 
+## notes
+
+Your array must match _exactly_ the schema of the table. Copy From mode uses a transaction implicitly so if your stream fails for any reason (missing data, disconnection, table constraint violations) the entire import will be rolled back...so that's nice.
+
 ## license
 
 The MIT License (MIT)
